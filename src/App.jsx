@@ -194,6 +194,7 @@ function App() {
 
                 <button className="py-2 group">
                   <IconEllipsis />
+                  <p className="sr-only">icon</p>
                 </button>
               </div>
 
