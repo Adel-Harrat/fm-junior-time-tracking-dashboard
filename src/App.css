@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+body {
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+}
+
+.my-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 0px) {
+  .my-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .my-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "person person"
+      "1st 2nd"
+      "3rd 4th"
+      "5th 6th";
+  }
+  .person {
+    grid-area: person;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .my-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 14rem);
+    grid-template-areas:
+      "person 1st 2nd 3rd"
+      "person 4th 5th 6th";
+  }
+  .person {
+    grid-area: person;
+    align-content: stretch;
+  }
+}
