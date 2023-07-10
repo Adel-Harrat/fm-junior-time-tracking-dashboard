@@ -202,9 +202,10 @@ function App() {
                 {card.period[active].current}
               </h1>
               <h2 className="text-sm text-tw-pale-blue mt-2">
-                Last{" "}
                 <span className="capitalize">
-                  {active === "daily" ? "Day" : active.replace("ly", "")}
+                  {active === "daily"
+                    ? "Yesterday"
+                    : `Last ${active.replace("ly", "")}`}
                 </span>{" "}
                 - {card.period[active].previous}
               </h2>
